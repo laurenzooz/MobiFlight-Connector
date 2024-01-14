@@ -4,6 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XPlaneConnector;
+using System.IO;
+
+public string ReadFileContent() // check if custom ip config file exists, and if yes, get the ip
+{
+    
+}
+
 
 namespace MobiFlight.xplane
 {
@@ -33,7 +40,20 @@ namespace MobiFlight.xplane
 
         public bool Connect()
         {
-            if (Connector == null) Connector = new XPlaneConnector.XPlaneConnector();
+            if (Connector == null) 
+			{
+
+				if (File.Exists("xp_custom_ip.txt"))
+    			{
+        			Connector = new XPlaneConnector.XPlaneConnector(File.ReadAllText(xp_custom_ip.txt)); // check if custom ip file exists, if yes, read it to get the custom ip
+    			}
+				else
+				{
+					Connector = new XPlaneConnector.XPlaneConnector();
+				}
+    
+			}
+			
             
             Connector.OnLog += (m) =>
             {
