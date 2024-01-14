@@ -132,6 +132,8 @@ namespace MobiFlight
 
 			if (File.Exists("xp_custom_ip.txt"))
    			{
+				FlightSimConnectionMethod = FlightSimConnectionMethod.XPLANE;
+                FlightSimType = FlightSimType.XPLANE;
         		return true;
     		}
 
