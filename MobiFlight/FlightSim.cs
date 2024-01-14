@@ -1,10 +1,9 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.IO;
-
 
 namespace MobiFlight
 {
@@ -104,10 +103,9 @@ namespace MobiFlight
                 FlightSimType = FlightSimType.P3D;
                 return true;
             }
-            // check for x-plane and xpuipc and remote xplane (for now only checking if custom ip file exists)
-			// TODO: Check also the connection somehow? (aka make sure the ip is valid and xplane is running on that ip)
+            // check for x-plane and xpuipc
             proc = "x-plane";
-            if (Process.GetProcessesByName(proc).Length > 0)
+            if (Process.GetProcessesByName(proc).Length > 0 || File.Exists("xp_custom_ip.txt"))
             {
                 FlightSimConnectionMethod = FlightSimConnectionMethod.XPLANE;
                 FlightSimType = FlightSimType.XPLANE;
@@ -129,13 +127,6 @@ namespace MobiFlight
                 FlightSimType = FlightSimType.XPLANE;
                 return true;
             }
-
-			if (File.Exists("xp_custom_ip.txt"))
-   			{
-				FlightSimConnectionMethod = FlightSimConnectionMethod.XPLANE;
-                FlightSimType = FlightSimType.XPLANE;
-        		return true;
-    		}
 
             // if we made it here, then
             // we didn't detect anything
