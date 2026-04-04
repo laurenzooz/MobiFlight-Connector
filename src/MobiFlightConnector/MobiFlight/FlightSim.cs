@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -114,7 +115,7 @@ namespace MobiFlight
             }
             // check for x-plane and xpuipc
             proc = "x-plane";
-            if (Process.GetProcessesByName(proc).Length > 0)
+            if (Process.GetProcessesByName(proc).Length > 0 || File.Exists("xp_custom_ip.txt"))
             {
                 FlightSimConnectionMethod = FlightSimConnectionMethod.XPLANE;
                 FlightSimType = FlightSimType.XPLANE;
