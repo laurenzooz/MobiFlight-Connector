@@ -2,7 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/bin
+#/bin
 /CmdMessenger-3.6/CmdMessenger/CSharp/CommandMessenger/bin
 /CmdMessenger-3.6/CmdMessenger/CSharp/CommandMessenger/obj/Debug
 /CmdMessenger-3.6/CmdMessenger/CSharp/CommandMessenger/obj/Debug-Mobiflight Offline
