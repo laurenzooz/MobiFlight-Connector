@@ -67,11 +67,13 @@
             this.peripheralsPanel = new MobiFlight.UI.Panels.Settings.PeripheralsPanel();
             this.ProSimTab = new System.Windows.Forms.TabPage();
             this.proSimPanel = new MobiFlight.UI.Panels.Settings.ProSimPanel();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.firmwareSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.firmwareUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.firmwareUpdateBackgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.xPlaneRemotePanel1 = new MobiFlight.UI.Panels.Settings.XPlaneRemotePanel();
             this.panel1.SuspendLayout();
             this.ArcazeTabPage.SuspendLayout();
             this.mfModuleSettingsContextMenuStrip.SuspendLayout();
@@ -80,6 +82,7 @@
             this.mobiFlightTabPage.SuspendLayout();
             this.peripheralsTabPage.SuspendLayout();
             this.ProSimTab.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -278,6 +281,7 @@
             this.tabControl1.Controls.Add(this.peripheralsTabPage);
             this.tabControl1.Controls.Add(this.ArcazeTabPage);
             this.tabControl1.Controls.Add(this.ProSimTab);
+            this.tabControl1.Controls.Add(this.tabPage1);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -305,6 +309,7 @@
             // 
             resources.ApplyResources(this.peripheralsPanel, "peripheralsPanel");
             this.peripheralsPanel.Name = "peripheralsPanel";
+            this.peripheralsPanel.Load += new System.EventHandler(this.peripheralsPanel_Load);
             // 
             // ProSimTab
             // 
@@ -317,6 +322,13 @@
             // 
             resources.ApplyResources(this.proSimPanel, "proSimPanel");
             this.proSimPanel.Name = "proSimPanel";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.xPlaneRemotePanel1);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // firmwareSettingsToolStripMenuItem
             // 
@@ -338,6 +350,11 @@
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Hint";
             // 
+            // xPlaneRemotePanel1
+            // 
+            resources.ApplyResources(this.xPlaneRemotePanel1, "xPlaneRemotePanel1");
+            this.xPlaneRemotePanel1.Name = "xPlaneRemotePanel1";
+            // 
             // SettingsDialog
             // 
             resources.ApplyResources(this, "$this");
@@ -358,6 +375,7 @@
             this.peripheralsTabPage.ResumeLayout(false);
             this.ProSimTab.ResumeLayout(false);
             this.ProSimTab.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -407,5 +425,7 @@
         private Panels.Settings.PeripheralsPanel peripheralsPanel;
         private System.Windows.Forms.TabPage ProSimTab;
         private Panels.Settings.ProSimPanel proSimPanel;
+        private System.Windows.Forms.TabPage tabPage1;
+        private Panels.Settings.XPlaneRemotePanel xPlaneRemotePanel1;
     }
 }

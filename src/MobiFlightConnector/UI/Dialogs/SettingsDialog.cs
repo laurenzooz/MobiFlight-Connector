@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MobiFlight.UI.Panels.Settings;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -91,6 +92,8 @@ namespace MobiFlight.UI.Dialogs
             peripheralsPanel.LoadSettings();
 
             proSimPanel.LoadSettings();
+
+            xPlaneRemotePanel1.LoadSettings();
         }
 
         /// <summary>
@@ -113,7 +116,9 @@ namespace MobiFlight.UI.Dialogs
 
             // ProSim Tab
             proSimPanel.SaveSettings();
-            
+
+            xPlaneRemotePanel1.SaveSettings();
+
             // Reset ProSim connection state when settings change
             if (execManager != null)
             {
@@ -207,6 +212,16 @@ namespace MobiFlight.UI.Dialogs
         internal void UpdateRemovedModule(object sender, EventArgs e)
         {
             mobiFlightPanel.UpdateRemovedModule(sender as MobiFlightModuleInfo);
+        }
+
+        private void peripheralsPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

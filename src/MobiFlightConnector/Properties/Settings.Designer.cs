@@ -647,5 +647,29 @@ namespace MobiFlight.Properties {
                 this["ProSimMaxRetryAttempts"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool XPlaneRemote {
+            get {
+                return ((bool)(this["XPlaneRemote"]));
+            }
+            set {
+                this["XPlaneRemote"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
+        public string XPlaneRemoteIP {
+            get {
+                return ((string)(this["XPlaneRemoteIP"]));
+            }
+            set {
+                this["XPlaneRemoteIP"] = value;
+            }
+        }
     }
 }

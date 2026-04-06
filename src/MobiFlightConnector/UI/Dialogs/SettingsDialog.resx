@@ -226,7 +226,7 @@
     <value>arcazePanel</value>
   </data>
   <data name="&gt;&gt;arcazePanel.Type" xml:space="preserve">
-    <value>MobiFlight.UI.Panels.Settings.ArcazePanel, MFConnector, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MobiFlight.UI.Panels.Settings.ArcazePanel, MFConnector, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;arcazePanel.Parent" xml:space="preserve">
     <value>ArcazeTabPage</value>
@@ -412,7 +412,7 @@
     <value>generalPanel</value>
   </data>
   <data name="&gt;&gt;generalPanel.Type" xml:space="preserve">
-    <value>MobiFlight.UI.Panels.Settings.GeneralPanel, MFConnector, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MobiFlight.UI.Panels.Settings.GeneralPanel, MFConnector, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;generalPanel.Parent" xml:space="preserve">
     <value>generalTabPage</value>
@@ -466,7 +466,7 @@
     <value>mobiFlightPanel</value>
   </data>
   <data name="&gt;&gt;mobiFlightPanel.Type" xml:space="preserve">
-    <value>MobiFlight.UI.Panels.Settings.MobiFlightPanel, MFConnector, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MobiFlight.UI.Panels.Settings.MobiFlightPanel, MFConnector, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mobiFlightPanel.Parent" xml:space="preserve">
     <value>mobiFlightTabPage</value>
@@ -517,7 +517,7 @@
     <value>peripheralsPanel</value>
   </data>
   <data name="&gt;&gt;peripheralsPanel.Type" xml:space="preserve">
-    <value>MobiFlight.UI.Panels.Settings.PeripheralsPanel, MFConnector, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MobiFlight.UI.Panels.Settings.PeripheralsPanel, MFConnector, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;peripheralsPanel.Parent" xml:space="preserve">
     <value>peripheralsTabPage</value>
@@ -565,7 +565,7 @@
     <value>2, 3</value>
   </data>
   <data name="proSimPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>558, 82</value>
+    <value>558, 127</value>
   </data>
   <data name="proSimPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -574,7 +574,7 @@
     <value>proSimPanel</value>
   </data>
   <data name="&gt;&gt;proSimPanel.Type" xml:space="preserve">
-    <value>MobiFlight.UI.Panels.Settings.ProSimPanel, MFConnector, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MobiFlight.UI.Panels.Settings.ProSimPanel, MFConnector, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;proSimPanel.Parent" xml:space="preserve">
     <value>ProSimTab</value>
@@ -605,6 +605,54 @@
   </data>
   <data name="&gt;&gt;ProSimTab.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="xPlaneRemotePanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 6</value>
+  </data>
+  <data name="xPlaneRemotePanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>558, 524</value>
+  </data>
+  <data name="xPlaneRemotePanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;xPlaneRemotePanel1.Name" xml:space="preserve">
+    <value>xPlaneRemotePanel1</value>
+  </data>
+  <data name="&gt;&gt;xPlaneRemotePanel1.Type" xml:space="preserve">
+    <value>MobiFlight.UI.Panels.Settings.XPlaneRemotePanel, MFConnector, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPlaneRemotePanel1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;xPlaneRemotePanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>563, 585</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>X-Plane Remote</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -655,7 +703,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>155</value>
+    <value>104</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
