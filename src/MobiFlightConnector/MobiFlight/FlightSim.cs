@@ -16,6 +16,7 @@ namespace MobiFlight
         XPUIPC,
         SIMCONNECT,
         XPLANE,
+        XPLANE_REMOTE,
         OFFLINE
     }
 
@@ -44,6 +45,7 @@ namespace MobiFlight
             { FlightSimConnectionMethod.XPUIPC, "XPUIPC" },
             { FlightSimConnectionMethod.SIMCONNECT, "SimConnect" },
             { FlightSimConnectionMethod.XPLANE, "X-Plane (Direct)" },
+            { FlightSimConnectionMethod.XPLANE, "X-Plane (Remote)" },
             { FlightSimConnectionMethod.OFFLINE, "Offline" },
         };
 
@@ -115,9 +117,16 @@ namespace MobiFlight
             }
             // check for x-plane and xpuipc
             proc = "x-plane";
-            if (Process.GetProcessesByName(proc).Length > 0 || File.Exists("xp_custom_ip.txt"))
+            if (Process.GetProcessesByName(proc).Length > 0 )
             {
                 FlightSimConnectionMethod = FlightSimConnectionMethod.XPLANE;
+                FlightSimType = FlightSimType.XPLANE;
+                return true;
+            }
+
+            if (File.Exists("xp_custom_ip.txt") 
+            {
+                FlightSimConnectionMethod = FlightSimConnectionMethod.XPLANE_REMOTE;
                 FlightSimType = FlightSimType.XPLANE;
                 return true;
             }
