@@ -30,19 +30,40 @@ namespace MobiFlight.UI.Panels.Settings
         public void LoadSettings()
         {
             XPlaneRemote.Checked = Properties.Settings.Default.XPlaneRemote;
+          
             XPlaneIP.Text = Properties.Settings.Default.XPlaneRemoteIP;
             XPlaneIP.Enabled = XPlaneRemote.Checked;
+
+            XPlanePort.Text = Properties.Settings.Default.XPlaneRemotePort.ToString();
+            XPlanePort.Enabled = XPlaneRemote.Checked;
         }
 
         public void SaveSettings()
         {
             Properties.Settings.Default.XPlaneRemote = XPlaneRemote.Checked;
             Properties.Settings.Default.XPlaneRemoteIP = XPlaneIP.Text;
+            Properties.Settings.Default.XPlaneRemotePort = Int32.Parse(XPlanePort.Text);
         }
 
         private void XPlaneRemoteEnable_CheckedChanged(object sender, EventArgs e)
         {
             XPlaneIP.Enabled = XPlaneRemote.Checked;
+            XPlanePort.Enabled = XPlaneRemote.Checked;
+        }
+
+        private void XPlaneIP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

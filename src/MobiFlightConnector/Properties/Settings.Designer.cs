@@ -671,5 +671,17 @@ namespace MobiFlight.Properties {
                 this["XPlaneRemoteIP"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("49000")]
+        public int XPlaneRemotePort {
+            get {
+                return ((int)(this["XPlaneRemotePort"]));
+            }
+            set {
+                this["XPlaneRemotePort"] = value;
+            }
+        }
     }
 }

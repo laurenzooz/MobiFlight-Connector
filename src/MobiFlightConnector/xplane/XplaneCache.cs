@@ -31,7 +31,7 @@ namespace MobiFlight.xplane
         {
             Properties.Settings.Default.PropertyChanged += (sender, args) =>
             {
-                if (args.PropertyName == "XPlaneRemoteIP" || args.PropertyName == "XPlaneRemote")
+                if (args.PropertyName == "XPlaneRemoteIP" || args.PropertyName == "XPlaneRemote" || args.PropertyName == "XPlanePort")
                 {
                     this.Disconnect();
 
@@ -52,7 +52,7 @@ namespace MobiFlight.xplane
         {
             if (Connector == null) 
             {
-              if (Properties.Settings.Default.XPlaneRemote) Connector = new XPlaneConnector.XPlaneConnector(Properties.Settings.Default.XPlaneRemoteIP);
+              if (Properties.Settings.Default.XPlaneRemote) Connector = new XPlaneConnector.XPlaneConnector(Properties.Settings.Default.XPlaneRemoteIP, Properties.Settings.Default.XPlaneRemotePort);
               else Connector = new XPlaneConnector.XPlaneConnector();
             }            
             Connector.OnLog += (m) =>

@@ -165,5 +165,8 @@
     <Setting Name="XPlaneRemoteIP" Type="System.String" Scope="User">
       <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
+    <Setting Name="XPlaneRemotePort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">49000</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
