@@ -26,6 +26,24 @@ namespace MobiFlight.xplane
             }
         }
 
+        // Listen if remote settings are changed, then disconnect and reconnect with the new settings
+        public XplaneCache()
+        {
+            Properties.Settings.Default.PropertyChanged += (sender, args) =>
+            {
+                if (args.PropertyName == "XPlaneRemoteIP" || args.PropertyName == "XPlaneRemote")
+                {
+                    this.Disconnect();
+
+                    if (Connector != null)
+                    {
+                        Connector.Stop();
+                        Connector = null;
+                    }
+                }
+            };
+        }
+
         XPlaneConnector.XPlaneConnector Connector = null;
 
         Dictionary<String, DataRefElement> SubscribedDataRefs = new Dictionary<String, DataRefElement>();
