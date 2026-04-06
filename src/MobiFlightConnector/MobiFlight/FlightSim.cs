@@ -45,7 +45,7 @@ namespace MobiFlight
             { FlightSimConnectionMethod.XPUIPC, "XPUIPC" },
             { FlightSimConnectionMethod.SIMCONNECT, "SimConnect" },
             { FlightSimConnectionMethod.XPLANE, "X-Plane (Direct)" },
-            { FlightSimConnectionMethod.XPLANE, "X-Plane (Remote)" },
+            { FlightSimConnectionMethod.XPLANE_REMOTE, "X-Plane (Remote)" },
             { FlightSimConnectionMethod.OFFLINE, "Offline" },
         };
 
