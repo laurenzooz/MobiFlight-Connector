@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using XPlaneConnector;
 
@@ -35,7 +34,7 @@ namespace MobiFlight.xplane
         {
             if (Connector == null) 
             {
-              if (File.Exists("xp_custom_ip.txt")) Connector = new XPlaneConnector.XPlaneConnector(File.ReadAllText("xp_custom_ip.txt"));
+              if (Properties.Settings.Default.XPlaneRemote) Connector = new XPlaneConnector.XPlaneConnector(Properties.Settings.Default.XPlaneRemoteIP);
               else Connector = new XPlaneConnector.XPlaneConnector();
             }            
             Connector.OnLog += (m) =>

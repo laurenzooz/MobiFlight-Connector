@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -124,7 +123,7 @@ namespace MobiFlight
                 return true;
             }
 
-            if (File.Exists("xp_custom_ip.txt"))
+            if (Properties.Settings.Default.XPlaneRemote)
             {
                 FlightSimConnectionMethod = FlightSimConnectionMethod.XPLANE_REMOTE;
                 FlightSimType = FlightSimType.XPLANE;
